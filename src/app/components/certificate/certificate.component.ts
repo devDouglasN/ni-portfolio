@@ -9,11 +9,6 @@ export class CertificateComponent {
 
   certificates = [
     {
-      title: 'AWS Certified Cloud Practitioner',
-      imageUrl: 'https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png',
-      credlyUrl: 'https://www.credly.com/badges/ba3ea7c1-5320-4787-a42a-f4caba45f04c'
-    },
-    {
       title: 'Google Cybersecurity Certificate',
       imageUrl: 'https://images.credly.com/size/680x680/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png',
       credlyUrl: 'https://www.credly.com/badges/d8b49429-31b2-418c-9569-2aa5bafea1dc/linked_in_profile'
