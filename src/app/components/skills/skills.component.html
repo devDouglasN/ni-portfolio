@@ -1,51 +1,114 @@
 <!-- skills.component.html -->
+
 <section id="skills" class="skills-section">
   <div class="container">
-    <!-- Título Principal -->
-    <div class="section-header" data-aos="fade-up">
-      <h2>Minhas Habilidades</h2>
+    <!-- Título da Seção -->
+    <div class="section-header">
+      <h2>Habilidades</h2>
     </div>
 
-    <!-- Seção de Cibersegurança na Nuvem AWS -->
-    <div class="skills-cloud" data-aos="fade-right" data-aos-delay="100">
-      <h3>Cibersegurança na Nuvem AWS</h3>
-      <div class="row align-items-center">
-        <!-- Card 1: AWS IAM -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="./assets/IAM-Identity-Center.svg" alt="AWS IAM">
-            </div>
-            <h4>AWS IAM</h4>
-          </div>
+    <!-- Seção de Cibersegurança -->
+    <section id="cybersecurity-skills" class="skills-section">
+      <div class="container skills-container">
+        <!-- Descrição das Habilidades -->s
+        <div class="skills-description">
+          <h3>Cibersegurança</h3>
+          <p>{{ skillDescription }}</p>
         </div>
-        <!-- Card 2: AWS Security Hub -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill-card">
+
+        <!-- Grid de Habilidades de Cibersegurança -->
+        <div class="skills-grid">
+          <!-- Splunk -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Uso o Splunk para monitorar e analisar dados em tempo real. Com ele, consigo coletar muita informação e criar dashboards para entender melhor o que está acontecendo. Também configuro alertas e faço buscas para encontrar problemas rapidamente.')"
+            (mouseleave)="resetSkillDescription()"
+          >
             <div class="skill-icon">
-              <img src="./assets/Inspector.svg" alt="AWS Security Hub">
+              <img src="assets/splunk.svg" alt="Splunk" />
             </div>
-            <h4>Amazon Inspector</h4>
           </div>
-        </div>
-        <!-- Card 3: AWS KMS -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill-card">
+
+          <!-- AWS IAM -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Sei usar o AWS IAM para gerenciar quem tem acesso aos recursos na AWS. Configuro usuários, grupos e permissões para manter tudo seguro. Também uso autenticação multifator (MFA) para aumentar a segurança.')"
+            (mouseleave)="resetSkillDescription()"
+          >
             <div class="skill-icon">
-              <img src="./assets/GuardDuty.svg" alt="AWS KMS">
+              <img src="assets/IAM-Identity-Center.svg" alt="AWS IAM" />
             </div>
-            <h4>Amazon GuardDuty</h4>
           </div>
-        </div>
-        <!-- Card 4: AWS Cloud Practitioner -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill-card">
+
+          <!-- AWS S3 -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Trabalho com o Amazon S3 para armazenar dados na nuvem de forma segura e escalável. Sei configurar permissões, versionamento e criptografia para proteger os dados. Também uso o S3 para hospedar sites estáticos.')"
+            (mouseleave)="resetSkillDescription()"
+          >
             <div class="skill-icon">
-              <img src="./assets/WAF.svg" alt="AWS Cloud Practitioner">
+              <img src="assets/Simple Storage Service.svg" alt="AWS S3" />
             </div>
-            <h4>AWS WAF</h4>
           </div>
+
+          <!-- AWS EC2 -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Utilizo o Amazon EC2 para criar e gerenciar servidores virtuais na AWS. Posso ajustar o tamanho e capacidade dos servidores conforme necessário. Também configuro segurança com grupos de segurança e chaves SSH.')"
+            (mouseleave)="resetSkillDescription()"
+          >
+            <div class="skill-icon">
+              <img src="assets/EC2.svg" alt="AWS EC2" />
+            </div>
+          </div>
+
+          <!-- AWS VPC -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Sei usar o AWS VPC para criar redes privadas na nuvem. Com ele, posso controlar o tráfego de rede e isolar recursos para maior segurança. Configuro sub-redes, gateways e regras de roteamento.')"
+            (mouseleave)="resetSkillDescription()"
+          >
+            <div class="skill-icon">
+              <img src="assets/VPC.svg" alt="AWS VPC" />
+            </div>
+          </div>
+
+          <!-- AWS CloudWatch -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Uso o Amazon CloudWatch para monitorar recursos e aplicativos na AWS. Coleto métricas, configuro alarmes e crio dashboards para acompanhar o desempenho e identificar problemas rapidamente.')"
+            (mouseleave)="resetSkillDescription()"
+          >
+            <div class="skill-icon">
+              <img src="assets/CloudWatch.svg" alt="Amazon CloudWatch" />
+            </div>
+          </div>
+
+          <!-- AWS KMS -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Conheço o AWS KMS para gerenciar chaves de criptografia. Uso ele para proteger dados sensíveis na nuvem, criando e controlando chaves criptográficas. Também integro o KMS com outros serviços da AWS para garantir segurança.')"
+            (mouseleave)="resetSkillDescription()"
+          >
+            <div class="skill-icon">
+              <img src="assets/Key Management Service.svg" alt="AWS KMS" />
+            </div>
+          </div>
+
+          <!-- AWS CloudTrail -->
+          <div
+            class="skill-card"
+            (mouseenter)="setSkillDescription('Uso o AWS CloudTrail para acompanhar as atividades na AWS. Ele registra ações de usuários e serviços, ajudando a monitorar mudanças e identificar atividades suspeitas.')"
+            (mouseleave)="resetSkillDescription()"
+          >
+            <div class="skill-icon">
+              <img src="assets/CloudTrail.svg" alt="AWS CloudTrail" />
+            </div>
+          </div>
+
+          <!-- Adicione outros skills de cibersegurança aqui, se houver -->
         </div>
       </div>
-    </div>
-
+    </section>
+  </div>
+</section>

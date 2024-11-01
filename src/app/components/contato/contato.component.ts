@@ -13,7 +13,7 @@ export class ContatoComponent {
   send = faPaperPlane;
 
   onSubmit() {
-    // Handle form submission logic here
+    // Lógica de envio do formulário
     alert('Mensagem enviada com sucesso!');
   }
 }

@@ -7,7 +7,6 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { FormacaoComponent } from './components/formacao/formacao.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContatoComponent } from './components/contato/contato.component';
-import { VideosComponent } from './components/videos/videos.component';
 import { CertificateComponent } from './components/certificate/certificate.component';
 
 const routes: Routes = [
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'certificados', component: CertificateComponent},
   { path: 'contato', component: ContatoComponent },
-  { path: 'videos', component: VideosComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

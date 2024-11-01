@@ -42,8 +42,7 @@
   text-align: center;
   cursor: pointer;
   position: relative;
-  text-transform: none; /* Manter a capitalização original */
-  /* Removido height e overflow */
+  text-transform: none;
 }
 
 .title-text,
@@ -51,7 +50,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 0; /* Garantir que o texto comece do topo */
+  top: 0;
   transition: opacity 0.3s ease-in-out;
 }
 

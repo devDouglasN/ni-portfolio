@@ -1,25 +1,51 @@
-<section id="contato" class="contact-section">
-  <div class="section-header">
-    <h2>Entre em Contato</h2>
-  </div>
-  <div class="contact-container">
-    <div class="contact-map" data-aos="fade-right">
-      <!-- Você pode inserir um mapa interativo aqui -->
+<section id="contato" class="contact-section section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Entre em Contato</h2>
+      <p>Sinta-se à vontade! 😄</p>
     </div>
-    <div class="contact-form" data-aos="fade-left">
-      <form (submit)="onSubmit()">
-        <h3>Envie uma Mensagem</h3>
-        <div class="form-group">
-          <input type="text" placeholder="Seu Nome" required />
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Seu Email" required />
-        </div>
-        <div class="form-group">
-          <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
-        </div>
-        <button type="submit">Enviar Mensagem</button>
-      </form>
+
+    <div class="contact-content">
+      <!-- Informações de Contato -->
+      <div class="contact-info" data-aos="fade-right">
+        <h3>Fale comigo</h3>
+        <p>
+          Sinta-se à vontade para me enviar uma mensagem.
+        </p>
+        <ul class="info-list">
+          <li>
+            <a href="mailto:danilo.cybersec@gmail.com" class="contact-link">
+              <fa-icon [icon]="mail" class="icon"></fa-icon>
+              <span>danilo.cybersec&#64;gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5511982746911" target="_blank" class="contact-link">
+              <fa-icon [icon]="wpp" class="icon"></fa-icon>
+              <span>+55 9 8274-6911</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Formulário de Contato -->
+      <div class="contact-form" data-aos="fade-left">
+        <form (submit)="onSubmit()">
+          <h3>Envie uma Mensagem</h3>
+          <div class="form-group">
+            <input type="text" placeholder="Seu Nome" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Seu Email" required />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn">
+            Enviar Mensagem <fa-icon [icon]="send"></fa-icon>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
